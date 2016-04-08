@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.rikirikmen.billsplit.NewBill">
+    <item
+        android:id="@+id/action_oke"
+        android:orderInCategory="100"
+        android:title="New Bill"
+        app:showAsAction="always"
+        android:icon="@drawable/check"
+        />
+</menu>
