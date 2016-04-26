@@ -25,11 +25,11 @@ public class Detail_Bill extends AppCompatActivity {
         setContentView(R.layout.activity_detail_bill);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
+        setTitle(getIntent().getStringExtra("bill_Name"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container_detail);
         mViewPager.setAdapter(mSectionsPagerAdapter);
@@ -55,7 +55,7 @@ public class Detail_Bill extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_plus_detail) {
             return true;
         }
 
@@ -74,7 +74,7 @@ public class Detail_Bill extends AppCompatActivity {
                 case 0:
                     return new Fragment_detail_bill();
                 case 1:
-                    return new Fragment_archive();
+                    return new FragmentArchive();
                 default:
                     return null;
             }

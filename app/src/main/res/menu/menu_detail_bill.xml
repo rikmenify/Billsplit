@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.rikirikmen.billsplit.Detail_Bill">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_plus_detail"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:icon="@drawable/check"
+        android:title="action_plus_detail"
+        app:showAsAction="always" />
 </menu>

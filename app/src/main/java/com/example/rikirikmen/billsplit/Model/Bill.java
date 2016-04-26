@@ -10,6 +10,12 @@ public class Bill extends RealmObject {
     @PrimaryKey private String Bill_ID;
     private String name;
     private Integer price;
+    private int Menu;
+    private int Person;
+
+    public int getPerson() { return Person; }
+
+    public void setPerson(int person) { Person = person; }
 
     public String getName() {
         return name;
@@ -34,4 +40,8 @@ public class Bill extends RealmObject {
     public void setBill_ID(String bill_ID) {
         Bill_ID = bill_ID;
     }
+
+    public int getMenu() { return Menu; }
+
+    public void setMenu(int menu) { Menu = menu; }
 }

@@ -20,7 +20,6 @@ import io.realm.Realm;
 public class NewBill extends AppCompatActivity {
 
     private EditText textfieldBill;
-    private EditText textfieldPeople;
     Realm realm;
 
     @Override
@@ -30,8 +29,8 @@ public class NewBill extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         textfieldBill = (EditText) findViewById(R.id.textfieldBill);
-        textfieldPeople = (EditText) findViewById(R.id.textfieldPeople);
         realm = Realm.getDefaultInstance();
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -40,8 +39,10 @@ public class NewBill extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_oke) {
-            addnewBill(String.valueOf(textfieldBill.getText()), 102312);
+            addnewBill(String.valueOf(textfieldBill.getText()), 0);
+            finish();
             return true;
+
         }
 
 
@@ -57,7 +58,7 @@ public class NewBill extends AppCompatActivity {
     private void addnewBill(String Name, Integer Price){
         realm.beginTransaction();
         Bill bill = realm.createObject(Bill.class);
-        bill.setBill_ID("Testing" + Price.toString());
+        bill.setBill_ID("Testing" + Name.toString());
         bill.setName(Name);
         bill.setPrice(Price);
         realm.commitTransaction();

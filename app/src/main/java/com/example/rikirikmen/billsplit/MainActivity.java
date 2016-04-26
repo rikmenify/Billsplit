@@ -1,12 +1,9 @@
 package com.example.rikirikmen.billsplit;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
@@ -18,12 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.rikirikmen.billsplit.Model.Bill;
-
-import java.security.PrivateKey;
-
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
 import io.realm.internal.Context;
 
 public class MainActivity extends AppCompatActivity {
@@ -104,9 +96,9 @@ public class MainActivity extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch(position){
                 case 0:
-                    return new Fragment_home();
+                    return new FragmentHome();
                 case 1:
-                    return new Fragment_archive();
+                    return new FragmentArchive();
                 default:
                     return null;
             }
