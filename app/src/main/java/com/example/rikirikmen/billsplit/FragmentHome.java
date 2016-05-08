@@ -3,16 +3,24 @@ package com.example.rikirikmen.billsplit;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.rikirikmen.billsplit.Adapter.BillListAdapter;
 import com.example.rikirikmen.billsplit.Model.Bill;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.realm.Realm;
+import io.realm.RealmChangeListener;
 import io.realm.RealmResults;
 import io.realm.Sort;
 
@@ -25,7 +33,9 @@ public class FragmentHome extends Fragment {
 
     Realm realm;
     private RealmResults<Bill> billRealmResults;
-    private ListView listView;
+    private RecyclerView recyclerView;
+    private RealmChangeListener realmBillChangeListener;
+    private BillListAdapter adapter;
     public FragmentHome() {
 
     }
@@ -37,20 +47,32 @@ public class FragmentHome extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
         realm = Realm.getDefaultInstance();
+        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         billRealmResults = realm.where(Bill.class).findAll();
-        billRealmResults.sort("Bill_ID", Sort.DESCENDING);
-        listView=(ListView) view.findViewById(R.id.listViewBill);
-        listView.setAdapter(new BillListAdapter(this.getActivity(), billRealmResults));
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        adapter = new BillListAdapter(this.getActivity(), billRealmResults);
+        setupListener();
+        billRealmResults.addChangeListener(realmBillChangeListener);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
-            }
-        });
+        recyclerView.setAdapter(adapter);
+
 
 
         return view;
 
     }
+
+
+    private  void setupListener(){
+        realmBillChangeListener = new RealmChangeListener() {
+            @Override public void onChange() {
+                billRealmResults.sort("Bill_ID", Sort.DESCENDING);
+                adapter.notifyDataSetChanged();
+            }
+        };
+
+    }
+
+
 
 }

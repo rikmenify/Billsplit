@@ -3,54 +3,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/itemlist_namabill"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:paddingLeft="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
-        android:gravity="center_vertical|center_horizontal|left" />
-    <TextView
-        android:id="@+id/itemlist_pricebill"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:gravity="center_vertical|center_horizontal|right"
-        android:paddingRight="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/totalTextView"
-        android:layout_toEndOf="@+id/totalTextView" />
+    <!--<TextView-->
+        <!--android:id="@+id/itemlist_namabill"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_toRightOf="@+id/textView"-->
+        <!--android:layout_toEndOf="@+id/textView"-->
+        <!--android:gravity="center_vertical|center_horizontal|left" />-->
+    <!--<TextView-->
+        <!--android:id="@+id/itemlist_pricebill"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:gravity="center_vertical|center_horizontal|right"-->
+        <!--android:paddingRight="dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_toRightOf="@+id/totalTextView"-->
+        <!--android:layout_toEndOf="@+id/totalTextView" />-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="Total : "
-        android:paddingLeft="40dp"
-        android:id="@+id/totalTextView"
-        android:gravity="center_vertical|center_horizontal|right"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/itemlist_namabill"
-        android:layout_toEndOf="@+id/itemlist_namabill" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:text="Total : "-->
+        <!--android:paddingLeft="40dp"-->
+        <!--android:id="@+id/totalTextView"-->
+        <!--android:gravity="center_vertical|center_horizontal|right"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_toRightOf="@+id/itemlist_namabill"-->
+        <!--android:layout_toEndOf="@+id/itemlist_namabill" />-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="Bill Name : "
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center_vertical|center_horizontal" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:text="Bill Name : "-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:gravity="center_vertical|center_horizontal" />-->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="X"
-        android:id="@+id/btnDeleteListBill"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:text="X"-->
+        <!--android:id="@+id/btnDeleteListBill"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
 
 </RelativeLayout>

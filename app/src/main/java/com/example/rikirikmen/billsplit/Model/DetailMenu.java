@@ -12,7 +12,7 @@ public class DetailMenu extends RealmObject {
 
     @PrimaryKey private int MenuID;
     private int Quantity;
-    private int BillID;
+    private String BillID;
     private String MenuName;
     private int MenuPrice;
 
@@ -32,11 +32,11 @@ public class DetailMenu extends RealmObject {
         MenuID = menuID;
     }
 
-    public int getBillID() {
+    public String getBillID() {
         return BillID;
     }
 
-    public void setBillID(int billID) {
+    public void setBillID(String billID) {
         BillID = billID;
     }
 

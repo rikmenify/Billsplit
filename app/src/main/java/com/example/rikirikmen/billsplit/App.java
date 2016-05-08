@@ -1,6 +1,7 @@
 package com.example.rikirikmen.billsplit;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.example.rikirikmen.billsplit.Model.Bill;
 
@@ -23,43 +24,69 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         RealmConfiguration config = new RealmConfiguration.Builder(this)
-                .schemaVersion(4)
+                .schemaVersion(9)
                 .migration(new Migration())
                 .build();
 
         Realm.setDefaultConfiguration(config);
+
+
     }
 
     public class Migration implements RealmMigration {
         @Override public void migrate(DynamicRealm realm, long oldVersion, long newVersion) {
             RealmSchema schema = realm.getSchema();
 
+
             if (oldVersion == 3) {
-//                RealmObjectSchema newSchema = schema.get("Bill");
-//                newSchema.addField("Menu", int.class);
-//                newSchema.addField("Person", int.class);
-//
-//                RealmObjectSchema DetailMenu = schema.create("DetailMenu");
-//                DetailMenu.addField("MenuID", int.class, FieldAttribute.PRIMARY_KEY);
-//                DetailMenu.addField("Quantity", int.class);
-//                DetailMenu.addField("BillID", int.class);
-//                DetailMenu.addField("MenuName", String.class);
-//                DetailMenu.addField("MenuPrice", int.class);
-//
-//                RealmObjectSchema DetailPerson = schema.create("DetailPerson");
-//                DetailPerson.addField("PersonID", int.class, FieldAttribute.PRIMARY_KEY);
-//                DetailPerson.addField("PersonQty", int.class);
-//                DetailPerson.addField("PersonName", String.class);
-//                DetailPerson.addField("PersonPrice", int.class);
+                RealmObjectSchema newSchema = schema.get("Bill");
+                newSchema.addField("Menu", int.class);
+                newSchema.addField("Person", int.class);
+
+                RealmObjectSchema DetailMenu = schema.create("DetailMenu");
+                DetailMenu.addField("MenuID", int.class, FieldAttribute.PRIMARY_KEY);
+                DetailMenu.addField("Quantity", int.class);
+                DetailMenu.addField("BillID", int.class);
+                DetailMenu.addField("MenuName", String.class);
+                DetailMenu.addField("MenuPrice", int.class);
+
+                RealmObjectSchema DetailPerson = schema.create("DetailPerson");
+                DetailPerson.addField("PersonID", int.class, FieldAttribute.PRIMARY_KEY);
+                DetailPerson.addField("PersonQty", int.class);
+                DetailPerson.addField("PersonName", String.class);
+                DetailPerson.addField("PersonPrice", int.class);
 
                 oldVersion++;
 
 
             }
             if (oldVersion == 4) {
+
+                RealmObjectSchema newSchema = schema.get("Bill");
+                newSchema.addField("person", int.class);
+
+
+
+                oldVersion++;
+            }
+            if (oldVersion == 5) {
+                RealmObjectSchema newSchema = schema.get("Bill");
                 oldVersion++;
             }
 
+            if (oldVersion == 6) {
+                RealmObjectSchema newSchema = schema.get("Bill");
+                newSchema.removeField("price");
+                oldVersion++;
+            }
+            if (oldVersion == 7) {
+                RealmObjectSchema newSchema = schema.get("Bill");
+                oldVersion++;
+            }
+            if (oldVersion == 8) {
+                RealmObjectSchema newSchema = schema.get("Bill");
+                oldVersion++;
+            }
         }
 
     }

@@ -72,9 +72,9 @@ public class Detail_Bill extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new Fragment_detail_bill();
+                    return new FragmentDetailBill();
                 case 1:
-                    return new FragmentArchive();
+                    return new FragmentPerson();
                 default:
                     return null;
             }

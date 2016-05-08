@@ -13,13 +13,18 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.rikirikmen.billsplit.Adapter.BillListAdapter;
 import com.example.rikirikmen.billsplit.Model.Bill;
+import com.example.rikirikmen.billsplit.Model.DetailPerson;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 
 public class NewBill extends AppCompatActivity {
 
     private EditText textfieldBill;
+    private EditText textfieldPeople;
+    private int Qty;
     Realm realm;
 
     @Override
@@ -29,6 +34,8 @@ public class NewBill extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         textfieldBill = (EditText) findViewById(R.id.textfieldBill);
+        textfieldPeople = (EditText) findViewById(R.id.textfieldPeople);
+
         realm = Realm.getDefaultInstance();
 
 
@@ -39,8 +46,9 @@ public class NewBill extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_oke) {
-            addnewBill(String.valueOf(textfieldBill.getText()), 0);
+            addnewBill(String.valueOf(textfieldBill.getText()), 0, Integer.valueOf(textfieldPeople.getText().toString()));
             finish();
+
             return true;
 
         }
@@ -55,14 +63,32 @@ public class NewBill extends AppCompatActivity {
         return true;
     }
 
-    private void addnewBill(String Name, Integer Price){
+    private void addnewBill(String Name, int Price, int Qty){
         realm.beginTransaction();
         Bill bill = realm.createObject(Bill.class);
         bill.setBill_ID("Testing" + Name.toString());
         bill.setName(Name);
         bill.setPrice(Price);
         realm.commitTransaction();
+
+        for (int i = 0; i < Qty ; i++ ){
+            realm.beginTransaction();
+            DetailPerson person = realm.createObject(DetailPerson.class);
+            person.setPersonID(getNextKey());
+            person.setBillID("Testing" + Name.toString());
+            person.setPersonName("Person " + i );
+            person.setPersonPrice(0);
+            realm.commitTransaction();
+        }
+
+
+
         Toast.makeText(this, "Sukses",Toast.LENGTH_LONG);
+    }
+
+    public int getNextKey()
+    {
+        return realm.where(DetailPerson.class).max("PersonID").intValue() + 1;
     }
 
 }
