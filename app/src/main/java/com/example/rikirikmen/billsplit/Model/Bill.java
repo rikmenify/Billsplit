@@ -7,9 +7,11 @@ import io.realm.annotations.PrimaryKey;
  * Created by rikirikmen on 4/6/2016.
  */
 public class Bill extends RealmObject {
+
+
     @PrimaryKey private String Bill_ID;
     private String name;
-    private Integer price;
+    private int price;
 
     public String getName() {
         return name;
@@ -19,13 +21,11 @@ public class Bill extends RealmObject {
         this.name = name;
     }
 
-    public Integer getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
+    public void setPrice(int price) { this.price = price; }
 
     public String getBill_ID() {
         return Bill_ID;
@@ -34,4 +34,5 @@ public class Bill extends RealmObject {
     public void setBill_ID(String bill_ID) {
         Bill_ID = bill_ID;
     }
+
 }

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_detail_bill.xml",
+        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\src\\main\\res\\menu\\menu_detail_bill.xml"
+    },
+    {
+        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_new_bill.xml",
+        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\src\\main\\res\\menu\\menu_new_bill.xml"
+    },
+    {
+        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\src\\main\\res\\menu\\menu_main.xml"
+    }
+]
