@@ -4,64 +4,29 @@
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="20477799583576" >
+    timestamp="21615326508803" >
 
     <task
         name="javac"
-        duration="2102" />
+        duration="16229" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="325" />
+        duration="728" />
     <task
         name="verifier"
-        duration="21" />
+        duration="160" />
 
     <artifact
-        location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\res\resources-debug.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-        type="DEX" />
-    <artifact
-        location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-        type="DEX" />
-    <artifact
-        location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
-        type="DEX" />
-    <artifact
-        location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-        type="DEX" />
-    <artifact
-        location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
-        type="DEX" />
+        location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="19194537709013" >
+    <build timestamp="21615326508803" >
         <artifact
             location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="20477799583576" >
-        <artifact
-            location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
-        <artifact
-            location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-            type="DEX" />
-        <artifact
-            location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
-            type="DEX" />
-        <artifact
-            location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
-        <artifact
-            location="D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

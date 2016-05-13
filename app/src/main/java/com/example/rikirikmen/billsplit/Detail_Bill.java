@@ -1,5 +1,6 @@
 package com.example.rikirikmen.billsplit;
 
+import android.app.Dialog;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -27,10 +28,7 @@ public class Detail_Bill extends AppCompatActivity {
         setSupportActionBar(toolbar);
         setTitle(getIntent().getStringExtra("bill_Name"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container_detail);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
@@ -56,6 +54,11 @@ public class Detail_Bill extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_plus_detail) {
+            Dialog dialog = new Dialog(this);
+            dialog.setTitle("Add Menu");
+
+            dialog.setContentView(R.layout.dialog_add_menu);
+            dialog.show();
             return true;
         }
 
@@ -72,9 +75,17 @@ public class Detail_Bill extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new FragmentDetailBill();
+                    FragmentDetailBill fragmentDetailBill = new FragmentDetailBill();
+                    Bundle args = new Bundle();
+                    args.putString("bill_ID", getIntent().getStringExtra("bill_ID"));
+                    fragmentDetailBill.setArguments(args);
+                    return fragmentDetailBill;
                 case 1:
-                    return new FragmentPerson();
+                    FragmentPerson fragmentPerson = new FragmentPerson();
+                    Bundle args_person = new Bundle();
+                    args_person.putString("bill_ID", getIntent().getStringExtra("bill_ID"));
+                    fragmentPerson.setArguments(args_person);
+                    return fragmentPerson;
                 default:
                     return null;
             }

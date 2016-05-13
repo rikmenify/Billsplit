@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.rikirikmen.billsplit.Adapter.BillDetailListAdapter;
 import com.example.rikirikmen.billsplit.Adapter.BillListAdapter;
@@ -32,6 +33,8 @@ public class FragmentDetailBill extends Fragment {
     private RecyclerView recyclerView;
     private RealmChangeListener realmMenuChangeListener;
     private BillDetailListAdapter adapter;
+    private String bill;
+
     public FragmentDetailBill() {
 
     }
@@ -43,8 +46,14 @@ public class FragmentDetailBill extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_detail_bill, container, false);
         realm = Realm.getDefaultInstance();
+
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            bill = getArguments().getString("bill_ID");
+        }
+
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewDetailBill);
-        menuRealmResults = realm.where(DetailMenu.class).findAllAsync(); // sementara find all
+        menuRealmResults = realm.where(DetailMenu.class).equalTo("BillID", bill).findAllAsync(); // sementara find all
         adapter = new BillDetailListAdapter(this.getActivity(), menuRealmResults);
         setupListener();
         menuRealmResults.addChangeListener(realmMenuChangeListener);
