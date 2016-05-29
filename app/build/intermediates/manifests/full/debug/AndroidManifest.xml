@@ -35,7 +35,7 @@
                 android:value="com.example.rikirikmen.billsplit.MainActivity" />
         </activity>
         <activity
-            android:name="com.example.rikirikmen.billsplit.Detail_Bill"
+            android:name="com.example.rikirikmen.billsplit.DetailBill"
             android:label="@string/title_activity_detail__bill"
             android:parentActivityName="com.example.rikirikmen.billsplit.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" >

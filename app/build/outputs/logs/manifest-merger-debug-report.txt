@@ -1,8 +1,6 @@
 -- Merging decision tree log ---
 manifest
 ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:2:1-42:12
-	xmlns:android
-		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:2:11-69
 	package
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:3:5-47
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
@@ -10,6 +8,8 @@ ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidMani
 	android:versionName
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
@@ -36,10 +36,10 @@ MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\
 MERGED from [com.android.support:cardview-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.jakewharton.timber:timber:4.1.2] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.jakewharton.timber\timber\4.1.2\AndroidManifest.xml:8:5-20
-	android:supportsRtl
-		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:9:9-41
+	android:supportsRtl
+		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:10:9-35
 	android:allowBackup
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:7:9-35
 	android:icon
@@ -70,28 +70,28 @@ activity#com.example.rikirikmen.billsplit.NewBill
 ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:22:9-30:20
 	android:label
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:24:13-60
-	android:theme
-		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:26:13-56
 	android:parentActivityName
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:25:13-55
+	android:theme
+		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:26:13-56
 	android:name
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:23:13-36
 meta-data#android.support.PARENT_ACTIVITY
 ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:27:13-29:81
-	android:name
-		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:28:17-63
 	android:value
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:29:17-78
-activity#com.example.rikirikmen.billsplit.Detail_Bill
+	android:name
+		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:28:17-63
+activity#com.example.rikirikmen.billsplit.DetailBill
 ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:31:9-39:20
 	android:label
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:33:13-64
-	android:theme
-		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:35:13-56
 	android:parentActivityName
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:34:13-55
+	android:theme
+		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:35:13-56
 	android:name
-		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:32:13-40
+		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:32:13-39
 uses-sdk
 INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
@@ -117,11 +117,11 @@ MERGED from [com.android.support:cardview-v7:23.3.0] D:\Project\Splitbill\mybill
 MERGED from [com.android.support:recyclerview-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
 MERGED from [com.jakewharton.timber:timber:4.1.2] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.jakewharton.timber\timber\4.1.2\AndroidManifest.xml:6:5-44
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
-	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75

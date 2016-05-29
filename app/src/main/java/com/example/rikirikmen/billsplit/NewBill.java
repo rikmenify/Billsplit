@@ -72,17 +72,26 @@ public class NewBill extends AppCompatActivity {
         realm.commitTransaction();
 
         for (int i = 0; i < Qty ; i++ ){
-            realm.beginTransaction();
-            DetailPerson person = realm.createObject(DetailPerson.class);
-            person.setPersonID(getNextKey());
-            person.setBillID("Testing" + Name.toString());
-            person.setPersonName("Person " + i );
-            person.setPersonPrice(0);
-            realm.commitTransaction();
+
+            if (i==0){
+                realm.beginTransaction();
+                DetailPerson person = realm.createObject(DetailPerson.class);
+                person.setPersonID(getNextKey());
+                person.setBillID("Testing" + Name.toString());
+                person.setPersonName("Me");
+                person.setPersonPrice(0);
+                realm.commitTransaction();
+
+            }else {
+                realm.beginTransaction();
+                DetailPerson person = realm.createObject(DetailPerson.class);
+                person.setPersonID(getNextKey());
+                person.setBillID("Testing" + Name.toString());
+                person.setPersonName("Person " + i );
+                person.setPersonPrice(0);
+                realm.commitTransaction();
+            }
         }
-
-
-
         Toast.makeText(this, "Sukses",Toast.LENGTH_LONG);
     }
 

@@ -1,6 +1,5 @@
 package com.example.rikirikmen.billsplit.Adapter;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,12 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.rikirikmen.billsplit.Detail_Bill;
+import com.example.rikirikmen.billsplit.DetailBill;
 import com.example.rikirikmen.billsplit.Model.Bill;
 import com.example.rikirikmen.billsplit.R;
 
@@ -51,17 +48,50 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.Holder
     @Override
     public void onBindViewHolder(Holder holder,final int position) {
         holder.textViewbill.setText(bill.get(position).getName());
-//        holder.textViewprice.setText(bill.get(position).getPrice());
+        holder.textViewprice.setText(String.valueOf(bill.get(position).getPrice()));
 
         holder.containerCard.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent detailBill = new Intent(context, Detail_Bill.class);
+                Intent detailBill = new Intent(context, DetailBill.class);
                 detailBill.putExtra("bill_ID", bill.get(position).getBill_ID());
                 detailBill.putExtra("bill_Name", bill.get(position).getName());
-//                detailBill.putExtra("bill_Price", bill.get(position).getPrice());
+                detailBill.putExtra("bill_Price", bill.get(position).getPrice());
                 context.startActivity(detailBill);
+            }
+        });
+
+        holder.btnDeleteListbill.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog.Builder alert = new AlertDialog.Builder(
+                        context);
+                alert.setTitle("Delete");
+                alert.setMessage("Are you sure want to delete the bill?");
+                alert.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        realm.beginTransaction();
+                        bill.remove(position);
+                        realm.commitTransaction();
+                        notifyDataSetChanged();
+                        dialog.dismiss();
+                    }
+                });
+
+
+                alert.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+
+                alert.show();
+
             }
         });
     }
@@ -107,7 +137,7 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.Holder
 //            @Override
 //            public void onClick(View v) {
 //
-//                Intent detailBill = new Intent(context, Detail_Bill.class);
+//                Intent detailBill = new Intent(context, DetailBill.class);
 //                detailBill.putExtra("bill_ID", bill.get(position).getBill_ID());
 ////                detailBill.putExtra("bill_Name", bill.get(position).getName());
 ////                detailBill.putExtra("bill_Price", bill.get(position).getPrice());
@@ -117,38 +147,7 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.Holder
 //
 //
 //        //Delete record bill
-//        holder.btnDeleteListbill.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
 //
-//                AlertDialog.Builder alert = new AlertDialog.Builder(
-//                        context);
-//                alert.setTitle("Delete");
-//                alert.setMessage("Are you sure want to delete the bill?");
-//                alert.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        realm.beginTransaction();
-//                        bill.remove(position);
-//                        realm.commitTransaction();
-//                        notifyDataSetChanged();
-//                        dialog.dismiss();
-//                    }
-//                });
-//
-//
-//                alert.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                    dialog.dismiss();
-//                    }
-//                });
-//
-//
-//                alert.show();
-//
-//            }
-//        });
 //
 //        return rowView;
 //    }

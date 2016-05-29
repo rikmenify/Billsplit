@@ -45,6 +45,10 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_input_add"
-        android:baselineAlignBottom="false" />
+        android:baselineAlignBottom="false"
+        app:rippleColor="?android:attr/colorBackground"
+        app:elevation="24dp"
+        app:fabSize="normal"
+        android:tint="@color/background_material_light" />
 
 </android.support.design.widget.CoordinatorLayout>

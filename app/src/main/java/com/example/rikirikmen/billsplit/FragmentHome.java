@@ -55,7 +55,7 @@ public class FragmentHome extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
         recyclerView.setAdapter(adapter);
-
+        
 
 
         return view;
@@ -66,7 +66,7 @@ public class FragmentHome extends Fragment {
     private  void setupListener(){
         realmBillChangeListener = new RealmChangeListener() {
             @Override public void onChange() {
-                billRealmResults.sort("Bill_ID", Sort.DESCENDING);
+                billRealmResults.sort("Bill_ID", Sort.ASCENDING);
                 adapter.notifyDataSetChanged();
             }
         };

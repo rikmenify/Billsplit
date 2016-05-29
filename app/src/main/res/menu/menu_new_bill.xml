@@ -7,6 +7,6 @@
         android:orderInCategory="100"
         android:title="New Bill"
         app:showAsAction="always"
-        android:icon="@drawable/check"
+        android:icon="@drawable/ic_done_white_24dp"
         />
 </menu>
