@@ -64,6 +64,7 @@ public class DetailBill extends AppCompatActivity {
             LayoutInflater inflater = getLayoutInflater();
             View dialoglayout = inflater.inflate(R.layout.dialog_add_menu, null);
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Insert Menu");
             builder.setView(dialoglayout);
             builder.show();
             return true;

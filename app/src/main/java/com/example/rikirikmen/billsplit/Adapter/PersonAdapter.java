@@ -1,6 +1,8 @@
 package com.example.rikirikmen.billsplit.Adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,7 +10,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.rikirikmen.billsplit.Model.DetailPerson;
 import com.example.rikirikmen.billsplit.R;
@@ -45,9 +49,63 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.Holder>{
     public void onBindViewHolder(Holder holder,final int position) {
         holder.textViewPerson.setText(Person.get(position).getPersonName());
 
-        holder.containerCard.setOnClickListener(new OnClickListener() {
+        // Delete
+        holder.btnDeleteListPerson.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                AlertDialog.Builder alert = new AlertDialog.Builder(
+                        context);
+                alert.setTitle("Delete");
+                alert.setMessage("Are you sure want to delete the person?");
+                alert.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        realm.beginTransaction();
+                        Person.remove(position);
+                        realm.commitTransaction();
+                        notifyDataSetChanged();
+                        dialog.dismiss();
+                    }
+                });
+
+
+                alert.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+
+                alert.show();
+
+            }
+        });
+
+        holder.btnEditListPerson.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
+                    final View dialogView = inflater.inflate(R.layout.dialog_edit_person, null);
+                    dialogBuilder.setView(dialogView);
+
+                    final EditText txtEditPerson = (EditText) dialogView.findViewById(R.id.txtEditPerson);
+
+                    dialogBuilder.setTitle("Edit" + Person.get(position).getPersonName());
+                    dialogBuilder.setMessage("Enter name");
+                    dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            Toast.makeText(context, txtEditPerson.getText().toString(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                        }
+                    });
+                    AlertDialog b = dialogBuilder.create();
+                    b.show();
 
             }
         });
@@ -62,6 +120,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.Holder>{
         TextView textViewPerson;
         TextView textViewPrice;
         Button btnDeleteListPerson;
+        Button btnEditListPerson;
         CardView containerCard;
         public Holder(View itemview){
 
@@ -70,6 +129,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.Holder>{
             textViewPerson=(TextView) itemview.findViewById(R.id.itemlistNamaPerson);
             textViewPrice=(TextView) itemview.findViewById(R.id.itemlistPricePerson);
             btnDeleteListPerson=(Button) itemview.findViewById(R.id.btnDeleteListPerson);
+            btnEditListPerson=(Button) itemview.findViewById(R.id.btnEditListPerson);
         }
     }
 

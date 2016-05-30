@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.rikirikmen.billsplit.DetailBill;
 import com.example.rikirikmen.billsplit.Model.Bill;
+import com.example.rikirikmen.billsplit.Model.DetailPerson;
 import com.example.rikirikmen.billsplit.R;
 
 import io.realm.Realm;
@@ -24,7 +25,7 @@ import io.realm.RealmResults;
  */
 
 public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.Holder>{
-
+    private RealmResults<DetailPerson> personRealmResults;
     private RealmResults<Bill> bill;
     private Context context;
     Realm realm;
@@ -75,6 +76,8 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.Holder
                     public void onClick(DialogInterface dialog, int which) {
                         realm.beginTransaction();
                         bill.remove(position);
+                        personRealmResults = realm.where(DetailPerson.class).equalTo("BillID", bill.get(position).getBill_ID()).findAll();
+                        personRealmResults.clear();
                         realm.commitTransaction();
                         notifyDataSetChanged();
                         dialog.dismiss();
