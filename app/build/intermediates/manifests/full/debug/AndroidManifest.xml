@@ -43,6 +43,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rikirikmen.billsplit.MainActivity" />
         </activity>
+        <activity
+            android:name="com.example.rikirikmen.billsplit.DialogActivity"
+            android:label="Insert Menu"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
     </application>
 
 </manifest>

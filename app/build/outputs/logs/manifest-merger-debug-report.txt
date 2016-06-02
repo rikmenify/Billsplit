@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:2:1-42:12
+ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:2:1-45:12
 	package
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:3:5-47
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
@@ -14,28 +14,28 @@ ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidMani
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
 application
-ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:5:5-40:19
-MERGED from [com.android.support:appcompat-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:cardview-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.jakewharton.timber:timber:4.1.2] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.jakewharton.timber\timber\4.1.2\AndroidManifest.xml:8:5-20
+ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:5:5-43:19
+MERGED from [com.android.support:appcompat-v7:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha1] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha1\AndroidManifest.xml:9:5-20
 	android:label
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:9:9-41
 	android:supportsRtl
@@ -92,33 +92,43 @@ ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidMani
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:35:13-56
 	android:name
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:32:13-39
+activity#com.example.rikirikmen.billsplit.DialogActivity
+ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:40:9-42:82
+	android:label
+		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:41:13-40
+	android:theme
+		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:42:13-70
+	android:name
+		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:40:19-49
 uses-sdk
 INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.jakewharton.timber:timber:4.1.2] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.jakewharton.timber\timber\4.1.2\AndroidManifest.xml:6:5-44
+MERGED from [io.realm:realm-android-library:1.0.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\io.realm\realm-android-library\1.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.1] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.getkeepsafe.relinker\relinker\1.2.1\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:appcompat-v7:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha1] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha1\AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.3.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:23.4.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml

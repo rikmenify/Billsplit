@@ -11,16 +11,10 @@ public class DetailPerson extends RealmObject {
 
     @PrimaryKey
     private int PersonID;
-    private String BillID;
     private int PersonQty;
     private String PersonName;
     private int PersonPrice;
 
-
-
-    public String getBillID() { return BillID; }
-
-    public void setBillID(String billID) { BillID = billID; }
 
     public int getPersonID() {
         return PersonID;

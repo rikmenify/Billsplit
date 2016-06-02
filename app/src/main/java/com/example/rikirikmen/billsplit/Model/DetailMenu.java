@@ -10,9 +10,8 @@ import io.realm.annotations.Required;
  */
 public class DetailMenu extends RealmObject {
 
-    @PrimaryKey private int MenuID;
+    private int MenuID;
     private int Quantity;
-    private String BillID;
     private String MenuName;
     private int MenuPrice;
 
@@ -30,14 +29,6 @@ public class DetailMenu extends RealmObject {
 
     public void setMenuID(int menuID) {
         MenuID = menuID;
-    }
-
-    public String getBillID() {
-        return BillID;
-    }
-
-    public void setBillID(String billID) {
-        BillID = billID;
     }
 
     public String getMenuName() {

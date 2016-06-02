@@ -14,10 +14,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.rikirikmen.billsplit.Model.Bill;
 import com.example.rikirikmen.billsplit.Model.DetailPerson;
 import com.example.rikirikmen.billsplit.R;
 
 import io.realm.Realm;
+import io.realm.RealmList;
 import io.realm.RealmResults;
 /**
  * Created by rikirikmen on 4/8/2016.
@@ -25,13 +27,13 @@ import io.realm.RealmResults;
 
 public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.Holder>{
 
-    private RealmResults<DetailPerson> Person;
+    private RealmList<DetailPerson> Person;
     private Context context;
     Realm realm;
     private static LayoutInflater inflater=null;
 
 
-    public PersonAdapter(Context context, RealmResults<DetailPerson> billRealmResults) {
+    public PersonAdapter(Context context, RealmList<DetailPerson> billRealmResults) {
         // TODO Auto-generated constructor stub
         Person = billRealmResults;
         realm = Realm.getDefaultInstance();
@@ -47,6 +49,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.Holder>{
 
     @Override
     public void onBindViewHolder(Holder holder,final int position) {
+
         holder.textViewPerson.setText(Person.get(position).getPersonName());
 
         // Delete

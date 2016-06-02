@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +16,14 @@ import android.widget.Toast;
 
 import com.example.rikirikmen.billsplit.Adapter.BillListAdapter;
 import com.example.rikirikmen.billsplit.Model.Bill;
+import com.example.rikirikmen.billsplit.Model.DetailPerson;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
+import io.realm.RealmQuery;
 import io.realm.RealmResults;
 import io.realm.Sort;
 
@@ -40,7 +43,6 @@ public class FragmentHome extends Fragment {
 
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -53,23 +55,41 @@ public class FragmentHome extends Fragment {
         setupListener();
         billRealmResults.addChangeListener(realmBillChangeListener);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-
         recyclerView.setAdapter(adapter);
-        
+
+        ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
+                Toast.makeText(getActivity(), "Test", Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
+        itemTouchHelper.attachToRecyclerView(recyclerView);
 
 
         return view;
+
+
 
     }
 
 
     private  void setupListener(){
         realmBillChangeListener = new RealmChangeListener() {
-            @Override public void onChange() {
+            @Override
+            public void onChange(Object element) {
                 billRealmResults.sort("Bill_ID", Sort.ASCENDING);
                 adapter.notifyDataSetChanged();
             }
         };
+
 
     }
 

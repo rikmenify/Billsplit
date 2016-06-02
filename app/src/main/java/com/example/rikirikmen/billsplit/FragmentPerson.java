@@ -8,16 +8,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-import android.widget.Toast;
-
-import com.example.rikirikmen.billsplit.Adapter.BillListAdapter;
 import com.example.rikirikmen.billsplit.Adapter.PersonAdapter;
 import com.example.rikirikmen.billsplit.Model.Bill;
 import com.example.rikirikmen.billsplit.Model.DetailPerson;
 
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
+import io.realm.RealmList;
+import io.realm.RealmQuery;
 import io.realm.RealmResults;
 import io.realm.Sort;
 
@@ -31,6 +29,7 @@ public class FragmentPerson extends Fragment {
     private RealmResults<DetailPerson> personRealmResults;
     private RecyclerView recyclerView;
     private RealmChangeListener realmPersonChangeListener;
+    private RealmList<DetailPerson> persons;
     private PersonAdapter adapter;
     private String bill;
     public FragmentPerson() {
@@ -51,10 +50,11 @@ public class FragmentPerson extends Fragment {
         }
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewPerson);
-        personRealmResults = realm.where(DetailPerson.class).equalTo("BillID", bill).findAllAsync();
-        adapter = new PersonAdapter(this.getActivity(), personRealmResults);
+        persons = realm.where(Bill.class).equalTo("Bill_ID", bill).findFirst().getDetailperson();
+
+        adapter = new PersonAdapter(this.getActivity(), persons);
         setupListener();
-        personRealmResults.addChangeListener(realmPersonChangeListener);
+        persons.first().addChangeListener(realmPersonChangeListener);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
         recyclerView.setAdapter(adapter);
         return view;
@@ -64,8 +64,9 @@ public class FragmentPerson extends Fragment {
 
     private  void setupListener(){
         realmPersonChangeListener = new RealmChangeListener() {
-            @Override public void onChange() {
-                personRealmResults.sort("PersonName", Sort.ASCENDING);
+            @Override
+            public void onChange(Object element) {
+                persons.sort("PersonID", Sort.ASCENDING);
                 adapter.notifyDataSetChanged();
             }
         };

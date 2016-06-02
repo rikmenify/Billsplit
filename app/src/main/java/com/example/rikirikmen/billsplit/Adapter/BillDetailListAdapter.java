@@ -8,12 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.rikirikmen.billsplit.Model.Bill;
 import com.example.rikirikmen.billsplit.Model.DetailMenu;
-import com.example.rikirikmen.billsplit.Model.DetailPerson;
 import com.example.rikirikmen.billsplit.R;
 
 import io.realm.Realm;
+import io.realm.RealmList;
 import io.realm.RealmResults;
 
 /**
@@ -21,13 +23,13 @@ import io.realm.RealmResults;
  */
 public class BillDetailListAdapter extends RecyclerView.Adapter<BillDetailListAdapter.Holder>{
 
-    private RealmResults<DetailMenu> Menu;
+    private RealmList<DetailMenu> Menu;
     private Context context;
     Realm realm;
     private static LayoutInflater inflater=null;
 
 
-    public BillDetailListAdapter(Context context, RealmResults<DetailMenu> menuRealmResults) {
+    public BillDetailListAdapter(Context context, RealmList<DetailMenu> menuRealmResults) {
         // TODO Auto-generated constructor stub
         Menu = menuRealmResults;
         realm = Realm.getDefaultInstance();
@@ -43,14 +45,16 @@ public class BillDetailListAdapter extends RecyclerView.Adapter<BillDetailListAd
 
     @Override
     public void onBindViewHolder(Holder holder,final int position) {
-        holder.textViewMenu.setText(Menu.get(position).getMenuID());
 
-        holder.containerCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        if (Menu.size() ==0){
+            Toast.makeText(context, "Test", Toast.LENGTH_SHORT).show();
 
-            }
-        });
+        }
+        else if (Menu.size() >1){
+            holder.textViewMenu.setText(Menu.get(position).getMenuName());
+
+
+        }
     }
 
     @Override
@@ -61,11 +65,15 @@ public class BillDetailListAdapter extends RecyclerView.Adapter<BillDetailListAd
     public class Holder extends RecyclerView.ViewHolder {
         TextView textViewMenu;
         CardView containerCard;
+        Button btnDeleteListMenu;
+        Button btnEditListMenu;
         public Holder(View itemview){
 
             super(itemview);
-            containerCard=(CardView) itemview.findViewById(R.id.containerCardPerson);
+            containerCard=(CardView) itemview.findViewById(R.id.containerCardMenu);
             textViewMenu=(TextView) itemview.findViewById(R.id.itemlistMenuName);
+            btnDeleteListMenu=(Button) itemview.findViewById(R.id.btnDeleteListMenu);
+            btnEditListMenu=(Button) itemview.findViewById(R.id.btnEditListMenu);
         }
     }
 

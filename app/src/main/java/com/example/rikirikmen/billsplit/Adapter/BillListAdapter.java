@@ -25,7 +25,6 @@ import io.realm.RealmResults;
  */
 
 public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.Holder>{
-    private RealmResults<DetailPerson> personRealmResults;
     private RealmResults<Bill> bill;
     private Context context;
     Realm realm;
@@ -75,9 +74,7 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.Holder
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         realm.beginTransaction();
-                        bill.remove(position);
-                        personRealmResults = realm.where(DetailPerson.class).equalTo("BillID", bill.get(position).getBill_ID()).findAll();
-                        personRealmResults.clear();
+                        bill.deleteFromRealm(position);
                         realm.commitTransaction();
                         notifyDataSetChanged();
                         dialog.dismiss();
@@ -118,41 +115,5 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.Holder
             btnDeleteListbill=(Button) itemview.findViewById(R.id.btnDeleteListBill);
         }
     }
-//    @Override
-//    public View getView(final int position, View convertView, ViewGroup parent) {
-//        // TODO Auto-generated method stub
-//        Holder holder=new Holder();
-//        View rowView;
-//        rowView = inflater.inflate(R.layout.list_bill, parent,false );
-//
-//
-//        holder.textViewbill=(TextView) rowView.findViewById(R.id.itemlist_namabill);
-//        holder.textViewprice=(TextView) rowView.findViewById(R.id.itemlist_pricebill);
-//        holder.btnDeleteListbill=(Button) rowView.findViewById(R.id.btnDeleteListBill);
-//
-//        holder.textViewbill.setText(bill.get(position).getName());
-//        holder.textViewprice.setText(bill.get(position).getPrice());
-//
-//
-//
-//        //Lempar Parameter ke detail bill
-//        rowView.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent detailBill = new Intent(context, DetailBill.class);
-//                detailBill.putExtra("bill_ID", bill.get(position).getBill_ID());
-////                detailBill.putExtra("bill_Name", bill.get(position).getName());
-////                detailBill.putExtra("bill_Price", bill.get(position).getPrice());
-//                context.startActivity(detailBill);
-//            }
-//        });
-//
-//
-//        //Delete record bill
-//
-//
-//        return rowView;
-//    }
 
 }

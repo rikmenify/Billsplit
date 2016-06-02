@@ -1,5 +1,6 @@
 package com.example.rikirikmen.billsplit.Model;
 
+import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -10,8 +11,26 @@ public class Bill extends RealmObject {
 
 
     @PrimaryKey private String Bill_ID;
+    public RealmList<DetailMenu> detailmenu;
+    public RealmList<DetailPerson> detailperson;
     private String name;
     private int price;
+
+    public RealmList<DetailPerson> getDetailperson() {
+        return detailperson;
+    }
+
+    public void setDetailperson(RealmList<DetailPerson> detailperson) {
+        this.detailperson = detailperson;
+    }
+
+    public RealmList<DetailMenu> getDetailmenu() {
+        return detailmenu;
+    }
+
+    public void setDetailmenu(RealmList<DetailMenu> detailmenu) {
+        this.detailmenu = detailmenu;
+    }
 
     public String getName() {
         return name;

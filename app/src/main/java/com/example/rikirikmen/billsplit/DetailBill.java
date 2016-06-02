@@ -2,6 +2,7 @@ package com.example.rikirikmen.billsplit;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -61,12 +62,9 @@ public class DetailBill extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_plus_detail) {
-            LayoutInflater inflater = getLayoutInflater();
-            View dialoglayout = inflater.inflate(R.layout.dialog_add_menu, null);
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Insert Menu");
-            builder.setView(dialoglayout);
-            builder.show();
+            Intent dialogAddMenu = new Intent(this, DialogActivity.class);
+            dialogAddMenu.putExtra("bill_ID", getIntent().getStringExtra("bill_ID"));
+            startActivity(dialogAddMenu);
             return true;
         }
 

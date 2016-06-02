@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.rikirikmen.billsplit.Adapter.BillListAdapter;
 import com.example.rikirikmen.billsplit.Model.Bill;
+import com.example.rikirikmen.billsplit.Model.DetailMenu;
 import com.example.rikirikmen.billsplit.Model.DetailPerson;
 
 import io.realm.Realm;
@@ -63,36 +64,46 @@ public class NewBill extends AppCompatActivity {
         return true;
     }
 
-    private void addnewBill(String Name, int Price, int Qty){
-        realm.beginTransaction();
-        Bill bill = realm.createObject(Bill.class);
-        bill.setBill_ID("Testing" + Name.toString());
-        bill.setName(Name);
-        bill.setPrice(Price);
-        realm.commitTransaction();
+    private void addnewBill(final String Name, final int Price, final int Qty){
+//        realm.beginTransaction();
+//
+//        realm.commitTransaction();
+        realm.executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
 
-        for (int i = 0; i < Qty ; i++ ){
+                Bill bill = realm.createObject(Bill.class);
+                bill.setBill_ID("Testing" + Name.toString());
+                bill.setName(Name);
+                bill.setPrice(Price);
+                for (int i = 0; i < Qty ; i++ ) {
 
-            if (i==0){
-                realm.beginTransaction();
-                DetailPerson person = realm.createObject(DetailPerson.class);
-                person.setPersonID(getNextKey());
-                person.setBillID("Testing" + Name.toString());
-                person.setPersonName("Me");
-                person.setPersonPrice(0);
-                realm.commitTransaction();
+                    if (i == 0) {
+                        DetailPerson person = realm.createObject(DetailPerson.class);
+                        person.setPersonID(getNextKey());
+                        person.setPersonName("Me");
+                        person.setPersonPrice(0);
+                        bill.detailperson.add(person);
 
-            }else {
-                realm.beginTransaction();
-                DetailPerson person = realm.createObject(DetailPerson.class);
-                person.setPersonID(getNextKey());
-                person.setBillID("Testing" + Name.toString());
-                person.setPersonName("Person " + i );
-                person.setPersonPrice(0);
-                realm.commitTransaction();
-            }
-        }
-        Toast.makeText(this, "Sukses",Toast.LENGTH_LONG);
+                    }
+                    else
+                    {
+                        DetailPerson person = realm.createObject(DetailPerson.class);
+                        person.setPersonID(getNextKey());
+                        int a = i+1;
+                        person.setPersonName("Person " + a);
+                        person.setPersonPrice(0);
+                        bill.detailperson.add(person);
+
+                    }
+                }
+                }
+        });
+
+
+
+
+
     }
 
     public int getNextKey()
