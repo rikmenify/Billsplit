@@ -34,12 +34,11 @@ public class NewBill extends AppCompatActivity {
         setContentView(R.layout.activity_new_bill);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        textfieldBill = (EditText) findViewById(R.id.textfieldBill);
-        textfieldPeople = (EditText) findViewById(R.id.textfieldPeople);
-
+        textfieldBill = (EditText) findViewById(R.id.txtFieldBIll);
+        textfieldPeople = (EditText) findViewById(R.id.txtFieldPeople);
+        textfieldBill.setHint(R.string.txt_bill_new_bill);
+        textfieldPeople.setHint(R.string.txt_bill_new_bill_number_people);
         realm = Realm.getDefaultInstance();
-
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     @Override
@@ -65,15 +64,13 @@ public class NewBill extends AppCompatActivity {
     }
 
     private void addnewBill(final String Name, final int Price, final int Qty){
-//        realm.beginTransaction();
-//
-//        realm.commitTransaction();
+
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
 
                 Bill bill = realm.createObject(Bill.class);
-                bill.setBill_ID("Testing" + Name.toString());
+                bill.setBill_ID(getNextKeyBill());
                 bill.setName(Name);
                 bill.setPrice(Price);
                 for (int i = 0; i < Qty ; i++ ) {
@@ -105,10 +102,15 @@ public class NewBill extends AppCompatActivity {
 
 
     }
-
+    public int getNextKeyBill()
+    {
+        Number max = realm.where(Bill.class).max("Bill_ID");
+        return (max != null) ? max.intValue() + 1 : 0;
+    }
     public int getNextKey()
     {
-        return realm.where(DetailPerson.class).max("PersonID").intValue() + 1;
+        Number max = realm.where(DetailPerson.class).max("PersonID");
+        return (max != null) ? max.intValue() + 1 : 0;
     }
 
 }

@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.rikirikmen.billsplit.Model.Bill;
 import com.example.rikirikmen.billsplit.Model.DetailMenu;
+import com.example.rikirikmen.billsplit.Model.DetailPerson;
 import com.example.rikirikmen.billsplit.R;
 
 import io.realm.Realm;
@@ -31,12 +32,13 @@ public class BillDetailListAdapter extends RecyclerView.Adapter<BillDetailListAd
 
     public BillDetailListAdapter(Context context, RealmList<DetailMenu> menuRealmResults) {
         // TODO Auto-generated constructor stub
-        Menu = menuRealmResults;
         realm = Realm.getDefaultInstance();
+        Menu = menuRealmResults;
         this.context= context;
         inflater = ( LayoutInflater )context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
+
 
     @Override
     public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -46,15 +48,8 @@ public class BillDetailListAdapter extends RecyclerView.Adapter<BillDetailListAd
     @Override
     public void onBindViewHolder(Holder holder,final int position) {
 
-        if (Menu.size() ==0){
-            Toast.makeText(context, "Test", Toast.LENGTH_SHORT).show();
+        holder.textViewMenu.setText(Menu.get(position).getMenuName());
 
-        }
-        else if (Menu.size() >1){
-            holder.textViewMenu.setText(Menu.get(position).getMenuName());
-
-
-        }
     }
 
     @Override

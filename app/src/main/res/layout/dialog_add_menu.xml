@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="400dp" >
+    android:layout_height="wrap_content" >
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:id="@+id/txtMenuName"
-        android:hint="Menu Name"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:maxLines="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -16,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtMenuQuantity"
-        android:hint="Quantity"
+        android:inputType="number"
         android:layout_below="@+id/txtMenuName"
         android:layout_marginTop="10dp"
         android:layout_alignParentLeft="true"
@@ -26,19 +28,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtMenuPrice"
-        android:hint="Price"
+        android:inputType="number"
         android:layout_below="@+id/txtMenuQuantity"
         android:layout_centerHorizontal="true" />
 
-
-
     <RelativeLayout
+        android:id="@+id/listViewLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtMenuPrice"
-        android:layout_above="@+id/buttonOkMenu"
+        android:layout_above="@+id/btnOkMenu"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true">
 
@@ -50,14 +51,28 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
     </RelativeLayout>
-
-    <Button
-        android:id="@+id/buttonOkMenu"
+    <LinearLayout
+        android:layout_below="@id/listViewLayout"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=" Ok "
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
+        android:layout_height="wrap_content">
+    <Button
+            android:id="@+id/btnOkMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text=" Ok "
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    <Button
+            android:id="@+id/btnCancelMenu"
+            android:layout_height="wrap_content"
+            android:text=" Cancel "
+            android:layout_weight="0.5"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content" />
+    </LinearLayout>
 </RelativeLayout>

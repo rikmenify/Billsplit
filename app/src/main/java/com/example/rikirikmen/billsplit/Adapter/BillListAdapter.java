@@ -68,9 +68,9 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.Holder
 
                 AlertDialog.Builder alert = new AlertDialog.Builder(
                         context);
-                alert.setTitle("Delete");
-                alert.setMessage("Are you sure want to delete the bill?");
-                alert.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                alert.setTitle(R.string.alert_dialog_delete_bill_title);
+                alert.setMessage(R.string.alert_dialog_delete_bill_note);
+                alert.setPositiveButton(R.string.alert_dialog_yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         realm.beginTransaction();
@@ -82,7 +82,7 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.Holder
                 });
 
 
-                alert.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                alert.setNegativeButton(R.string.alert_dialog_no, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();

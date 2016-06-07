@@ -8,6 +8,10 @@
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\src\\main\\res\\menu\\menu_main.xml"
     },
     {
+        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_new_person.xml",
+        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\src\\main\\res\\menu\\menu_new_person.xml"
+    },
+    {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_detail_bill.xml",
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\src\\main\\res\\menu\\menu_detail_bill.xml"
     }

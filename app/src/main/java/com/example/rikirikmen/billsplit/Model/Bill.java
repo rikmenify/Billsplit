@@ -10,7 +10,7 @@ import io.realm.annotations.PrimaryKey;
 public class Bill extends RealmObject {
 
 
-    @PrimaryKey private String Bill_ID;
+    @PrimaryKey private int Bill_ID;
     public RealmList<DetailMenu> detailmenu;
     public RealmList<DetailPerson> detailperson;
     private String name;
@@ -46,11 +46,11 @@ public class Bill extends RealmObject {
 
     public void setPrice(int price) { this.price = price; }
 
-    public String getBill_ID() {
+    public int getBill_ID() {
         return Bill_ID;
     }
 
-    public void setBill_ID(String bill_ID) {
+    public void setBill_ID(int bill_ID) {
         Bill_ID = bill_ID;
     }
 

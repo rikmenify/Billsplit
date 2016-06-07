@@ -14,18 +14,25 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.rikirikmen.billsplit.Model.DetailMenu;
+import com.example.rikirikmen.billsplit.Model.DetailPerson;
+
+import io.realm.Realm;
+import io.realm.RealmQuery;
+import io.realm.RealmResults;
 
 public class DetailBill extends AppCompatActivity {
 
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
-
-
+    Realm realm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +42,7 @@ public class DetailBill extends AppCompatActivity {
         setSupportActionBar(toolbar);
         setTitle(getIntent().getStringExtra("bill_Name"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        realm = Realm.getDefaultInstance();
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         mViewPager = (ViewPager) findViewById(R.id.container_detail);
@@ -45,28 +53,12 @@ public class DetailBill extends AppCompatActivity {
 
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_detail_bill, menu);
-        return true;
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_plus_detail) {
-            Intent dialogAddMenu = new Intent(this, DialogActivity.class);
-            dialogAddMenu.putExtra("bill_ID", getIntent().getStringExtra("bill_ID"));
-            startActivity(dialogAddMenu);
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -83,13 +75,13 @@ public class DetailBill extends AppCompatActivity {
                 case 0:
                     FragmentDetailBill fragmentDetailBill = new FragmentDetailBill();
                     Bundle args = new Bundle();
-                    args.putString("bill_ID", getIntent().getStringExtra("bill_ID"));
+                    args.putInt("bill_ID", getIntent().getIntExtra("bill_ID",-1));
                     fragmentDetailBill.setArguments(args);
                     return fragmentDetailBill;
                 case 1:
                     FragmentPerson fragmentPerson = new FragmentPerson();
                     Bundle args_person = new Bundle();
-                    args_person.putString("bill_ID", getIntent().getStringExtra("bill_ID"));
+                    args_person.putInt("bill_ID", getIntent().getIntExtra("bill_ID",-1));
                     fragmentPerson.setArguments(args_person);
                     return fragmentPerson;
                 default:
@@ -113,4 +105,6 @@ public class DetailBill extends AppCompatActivity {
             return null;
         }
     }
+
+
 }

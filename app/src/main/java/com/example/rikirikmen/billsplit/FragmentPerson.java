@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.example.rikirikmen.billsplit.Adapter.PersonAdapter;
@@ -33,8 +35,9 @@ public class FragmentPerson extends Fragment {
     private PersonAdapter adapter;
     private String bill;
     public FragmentPerson() {
-
+        setHasOptionsMenu(true);
     }
+
 
 
     @Override
@@ -61,6 +64,11 @@ public class FragmentPerson extends Fragment {
 
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_new_person, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
 
     private  void setupListener(){
         realmPersonChangeListener = new RealmChangeListener() {

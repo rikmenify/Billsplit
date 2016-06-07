@@ -18,6 +18,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/textfieldBill"
         android:layout_marginTop="23dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:singleLine="true"
         android:hint="Bill Title"
         android:textSize="20dp" />
 
@@ -26,6 +29,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:maxLength="2"
+        android:maxLines="1"
         android:id="@+id/textfieldPeople"
         android:layout_below="@+id/textfieldBill"
         android:layout_alignParentLeft="true"

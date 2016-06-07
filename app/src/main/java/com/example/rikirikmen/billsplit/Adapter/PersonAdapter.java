@@ -20,6 +20,7 @@ import com.example.rikirikmen.billsplit.R;
 
 import io.realm.Realm;
 import io.realm.RealmList;
+import io.realm.RealmObject;
 import io.realm.RealmResults;
 /**
  * Created by rikirikmen on 4/8/2016.
@@ -89,7 +90,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.Holder>{
         holder.btnEditListPerson.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                    AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
+                    final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
                     final View dialogView = inflater.inflate(R.layout.dialog_edit_person, null);
                     dialogBuilder.setView(dialogView);
 
@@ -99,12 +100,19 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.Holder>{
                     dialogBuilder.setMessage("Enter name");
                     dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
-                            Toast.makeText(context, txtEditPerson.getText().toString(), Toast.LENGTH_SHORT).show();
+                            realm.executeTransaction(new Realm.Transaction() {
+                                @Override
+                                public void execute(Realm realm) {
+                                    DetailPerson person = realm.createObject(DetailPerson.class, Person.get(position).getPersonID());
+                                    person.setPersonName(String.valueOf(txtEditPerson.getText()));
+                                }
+                            });
+                            notifyDataSetChanged();
                         }
                     });
                     dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
-
+                            dialog.dismiss();
                         }
                     });
                     AlertDialog b = dialogBuilder.create();

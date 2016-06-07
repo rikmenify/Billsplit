@@ -1,11 +1,15 @@
 package com.example.rikirikmen.billsplit;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SimpleAdapter;
@@ -31,9 +35,10 @@ public class FragmentDetailBill extends Fragment {
     private RecyclerView recyclerView;
     private RealmChangeListener realmMenuChangeListener;
     private BillDetailListAdapter adapter;
-    private String bill;
+    private int bill;
 
     public FragmentDetailBill() {
+            setHasOptionsMenu(true);
 
     }
 
@@ -47,7 +52,7 @@ public class FragmentDetailBill extends Fragment {
 
         Bundle bundle = getArguments();
         if (bundle != null) {
-            bill = getArguments().getString("bill_ID");
+            bill = getArguments().getInt("bill_ID");
         }
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewDetailBill);
@@ -66,6 +71,27 @@ public class FragmentDetailBill extends Fragment {
         return view;
 
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_plus_detail) {
+            Intent dialogAddMenu = new Intent(this.getContext(), DialogActivity.class);
+            dialogAddMenu.putExtra("bill_ID", bill);
+            startActivity(dialogAddMenu);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_detail_bill, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
 
     private  void setupListener(){
 
