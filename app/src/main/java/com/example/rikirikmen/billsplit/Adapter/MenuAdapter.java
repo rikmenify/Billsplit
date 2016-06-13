@@ -1,6 +1,7 @@
 package com.example.rikirikmen.billsplit.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -30,19 +31,18 @@ public class MenuAdapter extends ArrayAdapter<DetailPerson>{
     private RealmList<DetailPerson> persons;
     private Context context;
     Realm realm;
-    String BillID;
     List<PersonMenuObj> personMenuObjList;
     private LayoutInflater inflater;
 
-    public MenuAdapter(Context contexts, int resource, RealmList<DetailPerson> objects,String bill) {
+    public MenuAdapter(Context contexts, int resource, RealmList<DetailPerson> objects) {
         super(contexts, resource, objects);
         persons = objects;
         realm = Realm.getDefaultInstance();
-        BillID = bill;
         personMenuObjList = new ArrayList<>();
         context =contexts;
         inflater = ( LayoutInflater )context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        populatePim();
 
     }
 
@@ -60,6 +60,14 @@ public class MenuAdapter extends ArrayAdapter<DetailPerson>{
         TextView menuItem;
         CheckBox checkBoxMenu;
     }
+
+    public void populatePim(){
+        for(int i = 0; i<getCount(); i++){
+            PersonMenuObj personMenuObj = new PersonMenuObj(persons.get(i).getPersonID(), false);
+            Log.i("personID",""+ persons.get(i).getPersonID());
+            personMenuObjList.add(personMenuObj);
+        }
+    };
 
     public List<PersonMenuObj> getPersonMenuObjList() {
         return personMenuObjList;
@@ -80,9 +88,6 @@ public class MenuAdapter extends ArrayAdapter<DetailPerson>{
         else {
             holder = (ViewHolder) convertView.getTag();
         }
-        PersonMenuObj personMenuObj = new PersonMenuObj(persons.get(position).getPersonID(), false);
-        personMenuObjList.add(personMenuObj);
-
         holder.menuItem.setText(" (" +  persons.get(position).getPersonID() + ")");
         holder.checkBoxMenu.setText(persons.get(position).getPersonName());
 
@@ -90,7 +95,9 @@ public class MenuAdapter extends ArrayAdapter<DetailPerson>{
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    Log.i("onCHeck", ""+ position);
                     personMenuObjList.get(position).setStatus(true);
+
                 }
                 else {
                     personMenuObjList.get(position).setStatus(false);
@@ -100,6 +107,8 @@ public class MenuAdapter extends ArrayAdapter<DetailPerson>{
 
         return convertView;
     }
+
+
 
 
 }

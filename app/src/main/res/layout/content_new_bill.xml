@@ -17,6 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtFieldBIll"
+        android:minHeight="40dp"
+        android:hint="@string/txt_bill_new_bill"
         android:layout_marginTop="23dp"
         android:maxLines="1"
         android:ellipsize="end"
@@ -26,14 +28,15 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/txt_bill_new_bill_number_people"
         android:inputType="number"
         android:maxLength="2"
         android:maxLines="1"
         android:id="@+id/txtFieldPeople"
-        android:layout_below="@+id/textfieldBill"
+        android:textSize="20sp"
+        android:layout_below="@+id/txtFieldBIll"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="40dp"
-        android:textSize="20sp" />
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

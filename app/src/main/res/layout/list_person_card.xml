@@ -16,47 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/itemlistNamaPerson"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:paddingLeft="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/textView"
-            android:layout_toEndOf="@+id/textView"
-            android:gravity="center_vertical|center_horizontal|left" />
-        <TextView
-            android:id="@+id/itemlistPricePerson"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:gravity="center_vertical|center_horizontal|right"
-            android:paddingRight="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/totalPersonTextView"
-            android:layout_toEndOf="@+id/totalPersonTextView" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="Total : "
-            android:layout_marginLeft="40dp"
-            android:id="@+id/totalPersonTextView"
-            android:gravity="center_vertical|center_horizontal|right"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/itemlistNamaPerson"
-            android:layout_toEndOf="@+id/itemlistNamaPerson" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="Name : "
-            android:id="@+id/textView"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:gravity="center_vertical|center_horizontal" />
-
         <Button
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -74,6 +33,53 @@
             android:layout_alignParentTop="true"
             android:layout_toLeftOf="@+id/btnDeleteListPerson"
             android:layout_toStartOf="@+id/btnDeleteListPerson" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name : "
+            android:id="@+id/textView"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/abc_text_size_medium_material" />
+
+        <TextView
+            android:id="@+id/itemlistNamaPerson"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical|center_horizontal|left"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:textSize="@dimen/abc_text_size_medium_material" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_total"
+            android:id="@+id/totalPersonTextView"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/itemlistPricePerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_below="@+id/itemlistNamaPerson"
+            android:layout_alignLeft="@+id/itemlistNamaPerson"
+            android:layout_alignStart="@+id/itemlistNamaPerson"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:layout_marginTop="5dp" />
+
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

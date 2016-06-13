@@ -48,7 +48,8 @@ public class BillDetailListAdapter extends RecyclerView.Adapter<BillDetailListAd
     @Override
     public void onBindViewHolder(Holder holder,final int position) {
 
-        holder.textViewMenu.setText(Menu.get(position).getMenuName());
+        holder.txtMenuName.setText(Menu.get(position).getMenuName());
+        holder.txtMenuPrice.setText("@:"+ Menu.get(position).getMenuPrice() + "("+ Menu.get(position).getQuantity()+")");
 
     }
 
@@ -58,7 +59,8 @@ public class BillDetailListAdapter extends RecyclerView.Adapter<BillDetailListAd
     }
 
     public class Holder extends RecyclerView.ViewHolder {
-        TextView textViewMenu;
+        TextView txtMenuName;
+        TextView txtMenuPrice;
         CardView containerCard;
         Button btnDeleteListMenu;
         Button btnEditListMenu;
@@ -66,7 +68,8 @@ public class BillDetailListAdapter extends RecyclerView.Adapter<BillDetailListAd
 
             super(itemview);
             containerCard=(CardView) itemview.findViewById(R.id.containerCardMenu);
-            textViewMenu=(TextView) itemview.findViewById(R.id.itemlistMenuName);
+            txtMenuName=(TextView) itemview.findViewById(R.id.itemlistMenuName);
+            txtMenuPrice=(TextView) itemview.findViewById(R.id.itemlistMenuPrice);
             btnDeleteListMenu=(Button) itemview.findViewById(R.id.btnDeleteListMenu);
             btnEditListMenu=(Button) itemview.findViewById(R.id.btnEditListMenu);
         }

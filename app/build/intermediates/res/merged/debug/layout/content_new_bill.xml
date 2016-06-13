@@ -16,26 +16,27 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textfieldBill"
+        android:id="@+id/txtFieldBIll"
+        android:minHeight="40dp"
+        android:hint="@string/txt_bill_new_bill"
         android:layout_marginTop="23dp"
         android:maxLines="1"
         android:ellipsize="end"
         android:singleLine="true"
-        android:hint="Bill Title"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/txt_bill_new_bill_number_people"
         android:inputType="number"
         android:maxLength="2"
         android:maxLines="1"
-        android:id="@+id/textfieldPeople"
-        android:layout_below="@+id/textfieldBill"
+        android:id="@+id/txtFieldPeople"
+        android:textSize="20sp"
+        android:layout_below="@+id/txtFieldBIll"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="40dp"
-        android:hint="Number of People"
-        android:textSize="20dp" />
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

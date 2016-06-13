@@ -32,12 +32,12 @@
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\src\\main\\res\\layout\\fragment_person.xml"
     },
     {
-        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_edit_person.xml",
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\src\\main\\res\\layout\\dialog_edit_person.xml"
+    },
+    {
+        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
@@ -56,16 +56,16 @@
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
     },
     {
+        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_bill_card.xml",
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\src\\main\\res\\layout\\list_bill_card.xml"
-    },
-    {
-        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
@@ -120,12 +120,12 @@
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
-        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
-    },
-    {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_home.xml",
@@ -172,24 +172,24 @@
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
-    },
-    {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
-        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_new_bill.xml",
-        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\src\\main\\res\\layout\\activity_new_bill.xml"
-    },
-    {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_new_bill.xml",
+        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\src\\main\\res\\layout\\activity_new_bill.xml"
     },
     {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
@@ -212,12 +212,12 @@
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_text.xml"
     },
     {
-        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
-    },
-    {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
@@ -248,12 +248,12 @@
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
-    },
-    {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
         "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "D:\\Project\\Splitbill\\mybill\\Mybill\\Billsplit\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",

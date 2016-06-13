@@ -1,25 +1,16 @@
 package com.example.rikirikmen.billsplit;
 
-import android.content.Intent;
-import android.graphics.Canvas;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.example.rikirikmen.billsplit.Adapter.BillListAdapter;
 import com.example.rikirikmen.billsplit.Model.Bill;
-import com.example.rikirikmen.billsplit.Model.DetailMenu;
 import com.example.rikirikmen.billsplit.Model.DetailPerson;
 
 import io.realm.Realm;
-import io.realm.RealmResults;
 
 public class NewBill extends AppCompatActivity {
 
@@ -36,8 +27,6 @@ public class NewBill extends AppCompatActivity {
         setSupportActionBar(toolbar);
         textfieldBill = (EditText) findViewById(R.id.txtFieldBIll);
         textfieldPeople = (EditText) findViewById(R.id.txtFieldPeople);
-        textfieldBill.setHint(R.string.txt_bill_new_bill);
-        textfieldPeople.setHint(R.string.txt_bill_new_bill_number_people);
         realm = Realm.getDefaultInstance();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -45,7 +34,7 @@ public class NewBill extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_oke) {
+        if (id == R.id.menu_add_bill) {
             addnewBill(String.valueOf(textfieldBill.getText()), 0, Integer.valueOf(textfieldPeople.getText().toString()));
             finish();
 

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.rikirikmen.billsplit.NewBill">
     <item
-        android:id="@+id/add_person"
+        android:id="@+id/menu_add_person"
         android:orderInCategory="100"
         android:title="Add Person"
         app:showAsAction="always"

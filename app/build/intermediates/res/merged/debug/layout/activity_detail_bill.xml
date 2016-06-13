@@ -71,17 +71,60 @@
 </android.support.design.widget.CoordinatorLayout>
 
 
-<RelativeLayout
+    <RelativeLayout
+        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="90dp"
+        android:gravity="center|bottom"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center|bottom">
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Split now"/>
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:text="@string/txt_grand_total"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/abc_text_size_large_material" />
+            <TextView
+                android:id="@+id/txtGrandtotal"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="right"
+                android:text="Test"
+                android:layout_weight="0.5"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:layout_width="wrap_content" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_split"
+            android:id="@+id/btnSplit"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
     </RelativeLayout>
 
 

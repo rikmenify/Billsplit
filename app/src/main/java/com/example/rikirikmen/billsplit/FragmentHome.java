@@ -80,7 +80,11 @@ public class FragmentHome extends Fragment {
 
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        setupListener();
+    }
     private  void setupListener(){
         realmBillChangeListener = new RealmChangeListener() {
             @Override

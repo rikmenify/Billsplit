@@ -61,14 +61,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text=" Ok "
+            android:text="@string/txt_btn_oke_menu"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
     <Button
             android:id="@+id/btnCancelMenu"
             android:layout_height="wrap_content"
-            android:text=" Cancel "
+            android:text="@string/txt_btn_cancel_menu"
             android:layout_weight="0.5"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"

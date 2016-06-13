@@ -26,12 +26,11 @@ public class PersonMenuObj {
         PersonID = personID;
     }
 
-    public boolean isStatus() {
-        return Status;
-    }
-
     public void setStatus(boolean status) {
         Status = status;
     }
 
+    public boolean isStatus() {
+        return Status;
+    }
 }

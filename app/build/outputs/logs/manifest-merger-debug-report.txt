@@ -92,14 +92,14 @@ ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidMani
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:35:13-56
 	android:name
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:32:13-39
-activity#com.example.rikirikmen.billsplit.DialogActivity
+activity#com.example.rikirikmen.billsplit.DialogAddMenu
 ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:40:9-42:82
 	android:label
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:41:13-40
 	android:theme
 		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:42:13-70
 	android:name
-		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:40:19-49
+		ADDED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml:40:19-48
 uses-sdk
 INJECTED from D:\Project\Splitbill\mybill\Mybill\Billsplit\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [io.realm:realm-android-library:1.0.0] D:\Project\Splitbill\mybill\Mybill\Billsplit\app\build\intermediates\exploded-aar\io.realm\realm-android-library\1.0.0\AndroidManifest.xml:5:5-7:41

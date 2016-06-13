@@ -12,7 +12,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SimpleAdapter;
 
 import com.example.rikirikmen.billsplit.Adapter.BillDetailListAdapter;
 import com.example.rikirikmen.billsplit.Model.Bill;
@@ -21,7 +20,6 @@ import com.example.rikirikmen.billsplit.Model.DetailMenu;
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
 import io.realm.RealmList;
-import io.realm.RealmResults;
 import io.realm.Sort;
 
 
@@ -38,7 +36,7 @@ public class FragmentDetailBill extends Fragment {
     private int bill;
 
     public FragmentDetailBill() {
-            setHasOptionsMenu(true);
+
 
     }
 
@@ -49,7 +47,7 @@ public class FragmentDetailBill extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_detail_bill, container, false);
         realm = Realm.getDefaultInstance();
-
+        setHasOptionsMenu(true);
         Bundle bundle = getArguments();
         if (bundle != null) {
             bill = getArguments().getInt("bill_ID");
@@ -57,6 +55,7 @@ public class FragmentDetailBill extends Fragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewDetailBill);
         menu = realm.where(Bill.class).equalTo("Bill_ID", bill).findFirst().getDetailmenu();
+
         if (menu.isEmpty()){
 
         }
@@ -78,7 +77,7 @@ public class FragmentDetailBill extends Fragment {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_plus_detail) {
-            Intent dialogAddMenu = new Intent(this.getContext(), DialogActivity.class);
+            Intent dialogAddMenu = new Intent(this.getContext(), DialogAddMenu.class);
             dialogAddMenu.putExtra("bill_ID", bill);
             startActivity(dialogAddMenu);
             return true;
@@ -104,5 +103,9 @@ public class FragmentDetailBill extends Fragment {
         };
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        adapter.notifyDataSetChanged();
+    }
 }

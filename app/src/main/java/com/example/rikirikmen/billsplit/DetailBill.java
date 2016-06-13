@@ -17,19 +17,27 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.rikirikmen.billsplit.Model.Bill;
 import com.example.rikirikmen.billsplit.Model.DetailMenu;
 import com.example.rikirikmen.billsplit.Model.DetailPerson;
+
+import java.text.NumberFormat;
+import java.util.Locale;
 
 import io.realm.Realm;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
+import io.realm.annotations.PrimaryKey;
 
 public class DetailBill extends AppCompatActivity {
 
-
+    private TextView txtGrandTotal;
+    private int grandTotal;
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
     Realm realm;
@@ -43,7 +51,8 @@ public class DetailBill extends AppCompatActivity {
         setTitle(getIntent().getStringExtra("bill_Name"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         realm = Realm.getDefaultInstance();
-
+        txtGrandTotal = (TextView) findViewById(R.id.txtGrandtotal);
+        getBillGrandTotal();
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         mViewPager = (ViewPager) findViewById(R.id.container_detail);
         mViewPager.setAdapter(mSectionsPagerAdapter);
@@ -51,6 +60,17 @@ public class DetailBill extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs_detail);
         tabLayout.setupWithViewPager(mViewPager);
 
+    }
+
+    public void getBillGrandTotal(){
+        grandTotal = realm.where(Bill.class).equalTo("Bill_ID", getIntent().getIntExtra("bill_ID",-1)).findFirst().getPrice();
+        txtGrandTotal.setText(String.valueOf(grandTotal));
+    }
+
+    @Override
+    protected void onResume() {
+        getBillGrandTotal();
+        super.onResume();
     }
 
     @Override

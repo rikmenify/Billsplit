@@ -12,7 +12,6 @@ public class DetailPerson extends RealmObject {
 
     @PrimaryKey
     private int PersonID;
-    private int PersonQty;
     private String PersonName;
     private int PersonPrice;
 
@@ -40,8 +39,5 @@ public class DetailPerson extends RealmObject {
         PersonPrice = personPrice;
     }
 
-    public int getPersonQty() {  return PersonQty; }
-
-    public void setPersonQty(int personQty) { PersonQty = personQty; }
 
 }

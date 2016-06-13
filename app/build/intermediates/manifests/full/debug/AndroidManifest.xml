@@ -44,7 +44,7 @@
                 android:value="com.example.rikirikmen.billsplit.MainActivity" />
         </activity>
         <activity
-            android:name="com.example.rikirikmen.billsplit.DialogActivity"
+            android:name="com.example.rikirikmen.billsplit.DialogAddMenu"
             android:label="Insert Menu"
             android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
     </application>

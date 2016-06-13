@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Billsplit</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -11,9 +10,17 @@
     <string name="alert_dialog_yes">Yes</string>
     <string name="alert_dialog_delete_bill_note">Are you sure want to delete the bill?</string>
     <string name="alert_dialog_delete_bill_title">Delete</string>
-    <string name="txt_menu_name_hint">Menu name></string>
+    <string name="txt_menu_name_hint">Menu name</string>
     <string name="txt_menu_qty_hint">Quantity</string>
     <string name="txt_menu_price_hint">Price</string>
     <string name="txt_bill_new_bill">Bill Name</string>
+    <string name="add_new_person">Add New Person</string>
     <string name="txt_bill_new_bill_number_people">Number of people</string>
+    <string name="add_new_menu">Add new menu</string>
+    <string name="btn_split">Split Now</string>
+    <string name="txt_btn_oke_menu">Ok</string>
+    <string name="txt_btn_cancel_menu">Cancel</string>
+    <string name="txt_update_person">Enter new name</string>
+    <string name="txt_grand_total">Grand Total :</string>
+    <string name="txt_total">Total</string>
 </resources>
